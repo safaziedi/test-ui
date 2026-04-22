@@ -17,7 +17,7 @@ export function UserActions() {
       <DropdownMenu>
         <DropdownMenuTrigger asChild>
           {/* TEST 1 : Bouton avec une couleur de thème Shadcn (destructive/danger) */}
-          <Button variant="destructive">Mon Compte (Danger)</Button>
+          <Button variant="destructive">TESSSST</Button>
         </DropdownMenuTrigger>
         
         <DropdownMenuContent className="w-56 bg-popover border rounded-md shadow-lg p-1">
