@@ -1,11 +1,27 @@
-// Exportation du composant principal
-// export { default as Button } from './Button';
+// modules/ui/src/components/index.ts
 
-// Exportation des types (très important pour l'autocomplétion dans le parent)
-export type { ButtonProps } from './Button';
+// 1. Importation du CSS (si tu as un fichier global dans le submodule pour Tailwind)
+// import "../globals.css"; 
 
-export * from "./ui/dropdown-menu";
+// 2. Export des composants de base (Shadcn)
 export { Button } from "./ui/button";
-// Si vous avez d'autres composants plus tard, vous les ajoutez ici :
-// export { default as Input } from './Input';
-// export { default as Card } from './Card';
+export { 
+  DropdownMenu,
+  DropdownMenuTrigger,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuLabel,
+  DropdownMenuSeparator,
+  DropdownMenuShortcut,
+  DropdownMenuGroup,
+  DropdownMenuPortal,
+  DropdownMenuSub,
+  DropdownMenuSubContent,
+  DropdownMenuSubTrigger,
+  DropdownMenuRadioGroup,
+  DropdownMenuRadioItem,
+  DropdownMenuCheckboxItem
+} from "./ui/dropdown-menu";
+
+// 3. Export de ton composant métier (celui qui combine Button + Dropdown)
+export { UserActions } from "./UserActions";
