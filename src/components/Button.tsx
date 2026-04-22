@@ -2,14 +2,29 @@
 
 import React from 'react';
 
+/**
+ * Interface pour les propriétés du bouton.
+ */
 export interface ButtonProps {
+  /** Le contenu du bouton (texte, icônes, etc.) */
   children: React.ReactNode;
+  /** Fonction appelée lors du clic */
   onClick?: () => void;
+  /** Type HTML du bouton */
   type?: "button" | "submit" | "reset";
+  /** Style visuel prédéfini */
   variant?: "primary" | "secondary" | "danger";
+  /** Classes CSS additionnelles (Tailwind) */
   className?: string;
 }
 
+/**
+ * Composant Bouton réutilisable.
+ * * @example
+ * <Button variant="primary" onClick={() => console.log('test')}>
+ * Cliquez ici
+ * </Button>
+ */
 const Button = ({ 
   children, 
   onClick, 
@@ -18,10 +33,8 @@ const Button = ({
   className = "" 
 }: ButtonProps) => {
   
-  // Base styles using Tailwind
-  const baseStyles = "px-6 py-2 rounded-lg font-medium transition-all active:scale-95";
+  const baseStyles = "px-6 py-2 rounded-lg font-medium transition-all active:scale-95 flex items-center justify-center";
   
-  // Variant styles
   const variants = {
     primary: "bg-blue-600 text-white hover:bg-blue-700",
     secondary: "bg-gray-200 text-gray-800 hover:bg-gray-300",
