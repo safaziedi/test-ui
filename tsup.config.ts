@@ -7,6 +7,7 @@ export default defineConfig({
   clean: true,
   minify: true,
   external: [], // VIDE : On veut que React 18 soit packagé à l'intérieur du JS
+  noExternal: ['radix-ui', 'lucide-react', 'class-variance-authority', 'clsx', 'tailwind-merge'],
   injectStyle: true,
   outDir: 'dist',
   tsconfig: 'tsconfig.build.json',
